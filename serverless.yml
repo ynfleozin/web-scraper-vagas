@@ -1,0 +1,19 @@
+service: web-scraper-vagas
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  memorySize: 2048
+  timeout: 30
+
+plugins:
+  - serverless-offline
+
+functions:
+  app:
+    handler: app.run
+    events:
+      - http:
+          method: GET
+          path: scraping
