@@ -16,4 +16,8 @@ functions:
     events:
       - http:
           method: GET
-          path: scraping
+          path: vagas
+      - http:
+          method: GET
+          path: vagas/{expertise}
+
